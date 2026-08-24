@@ -15,6 +15,7 @@ const render = () => {
   taskContainer.forEach((item) => {
     // 3. BUILD: Create the HTML elements for each task
     let li = document.createElement("li");
+    li.style.listStyleType = "none";
     li.dataset.id = item.id;
 
     let title = document.createElement("span");
@@ -23,12 +24,12 @@ const render = () => {
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     checkBox.className = "checkbox";
-    checkBox.checked = item.isCompleted === "completed" ? true : false;
+    //  the condition was supposed to check if the item is completed. and item.isCompleted is how to do it not item.isCompleted === 'completed' because item.isCompleted is a boolean value not a string. so the correct way to check if the item is completed is to use item.isCompleted ? true : false which will return true if the item is completed and false if it is not.
+    checkBox.checked = item.isCompleted ? true : false;
 
     let _delete = document.createElement("button");
     _delete.className = "delete";
-    _delete.value = "Delete";
-
+    _delete.innerHTML = "Delete";
 
     li.appendChild(checkBox);
     li.appendChild(title);
@@ -88,6 +89,6 @@ ul.addEventListener("click", (e) => {
 
 if (localStorage.getItem("taskContainer")) {
   let savedRawText = localStorage.getItem("taskContainer");
-  taskContainer = JSON.parse(taskContainer);
+  taskContainer = JSON.parse(savedRawText);
   render();
 }

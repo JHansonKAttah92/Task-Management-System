@@ -26,7 +26,11 @@ input.input-task {
 }
 
 button.delete {
-    width: 50px;
-    height: 20px;
+  width: 50px;
+  height: 20px;
     float: right;
 }
+
+input.checkbox {
+  margin-right: 5%;
+  }
