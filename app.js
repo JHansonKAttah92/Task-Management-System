@@ -24,7 +24,6 @@ const render = () => {
     let checkBox = document.createElement("input");
     checkBox.type = "checkbox";
     checkBox.className = "checkbox";
-    //  the condition was supposed to check if the item is completed. and item.isCompleted is how to do it not item.isCompleted === 'completed' because item.isCompleted is a boolean value not a string. so the correct way to check if the item is completed is to use item.isCompleted ? true : false which will return true if the item is completed and false if it is not.
     checkBox.checked = item.isCompleted ? true : false;
 
     let _delete = document.createElement("button");
