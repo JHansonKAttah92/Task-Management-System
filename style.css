@@ -62,3 +62,8 @@ button.delete:hover {
 input.checkbox {
   margin-right: 5%;
 }
+
+input.checkbox:checked + span {
+  text-decoration: line-through;
+  color: gray;
+}
