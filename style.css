@@ -60,7 +60,7 @@ button.delete:hover {
 }
 
 input.checkbox {
-  margin-right: 5%;
+  margin-right: 50px;
 }
 
 input.checkbox:checked + span {
