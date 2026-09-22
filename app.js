@@ -68,8 +68,6 @@ ul.addEventListener("click", (e) => {
 
     localStorage.setItem("taskContainer", JSON.stringify(taskContainer));
     render();
-  } else {
-    return;
   }
 });
 
